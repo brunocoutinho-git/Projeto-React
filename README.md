@@ -13,6 +13,8 @@ Testes: Verificar a navegação e o funcionamento das funcionalidades.
 
 Apresentação: Demonstrar o aplicativo e explicar os principais componentes do código.
 
+SABORES: Queijo, Presunto, Frango, Carne.
+
 DESCRIÇÃO: ---
 
 INSTRUÇÕES DE EXECUÇÃO: ---
