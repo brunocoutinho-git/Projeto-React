@@ -1,4 +1,4 @@
-# Projeto de Cardápio (Tapioca do Juá)
+# Projeto de Cardápio (Tapioca Juá)
 ALUNO: Bruno Mateus de Oliveira Coutinho
 
 Planejamento: Definir o nome do aplicativo, as cores, os produtos e as funcionalidades.
