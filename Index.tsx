@@ -10,7 +10,7 @@ export default function HomeScreen() {
   return (
     <ScrollView style={styles.container}>
       <View style={styles.header}>
-        <Text style={styles.greeting}>Olá, seja bem-vindo(a)!</Text>
+        <Text style={styles.greeting}>Olá seja bem-vindo(a)!</Text>
         <Text style={styles.title}>
           Qual sabor de tapioca gostaria de provar hoje?
         </Text>
@@ -22,6 +22,7 @@ export default function HomeScreen() {
         <Text style={styles.bannerText}>
           Compre 2 Tapiocas e ganhe 1 Água de Coco grátis!
         </Text>
+          
         <TouchableOpacity style={styles.button}>
           <Text style={styles.buttonText}>Peça aqui</Text>
         </TouchableOpacity>
@@ -30,10 +31,16 @@ export default function HomeScreen() {
 
       <View style={styles.categories}>
         <TouchableOpacity style={styles.category}>
-          <Text style={styles.emoji}>🌮</Text>
+          <Text style={styles.emoji}></Text>
           <Text>Tapioca</Text>
         </TouchableOpacity>
+
+        <TouchableOpacity style={styles.category}>
+          <Text style={styles.emoji}>🥤</Text>
+          <Text>Bebida</Text>
+        </TouchableOpacity>
       </View>
+      
     </ScrollView>
   );
 }
