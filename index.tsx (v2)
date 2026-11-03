@@ -1,69 +1,62 @@
-import {
-    ScrollView,
-    Text,
-    TouchableOpacity,
-    View,
-    
-} from "react-native";
+import { ScrollView, Text, TouchableOpacity, View } from "react-native";
 import FoodCard from "../components/FoodCard";
-import{ foods}from "../constants/foods";
+import { foods } from "../constants/foods";
+
 export default function HomeScreen() {
   return (
-<ScrollView className="flex-1 bg-white px-5"
-  showsVerticalScrollIndicator={false}>
-<View className="mb-6 mt-4">
-  <Text className="text-base text-gray-500">
-    Olá, seja bem vindo!
-  </Text>
-  <Text className="text-2xl font-bold text-gray-900">
-    Gostaria de provar uma tapioca quentinha?
-  </Text>
-</View>
+    <ScrollView
+      className="flex-1 bg-white px-4"
+      showsVerticalScrollIndicator={false}
+    >
+      <View className="mb-6 mt-4">
+        <Text className="text-base text-gray-500">Olá, seja bem vindo!</Text>
+        <Text className="text-2xl font-bold text-gray-900">
+          Gostaria de provar uma tapioca quentinha?
+        </Text>
+      </View>
 
-<View className="rounded-3xl bg-green-700 p-6">
-  <Text className="text-sm font-bold text-white">
-    Oferta Especial!
-  </Text>
+      <View className="rounded-3xl bg-green-700 p-6">
+        <Text className="text-sm font-bold text-white">Oferta Especial!</Text>
+        <Text className="mt-2 text-3xl font-bold text-white">
+          Leve duas tapiocas e ganhe uma água de coco grátis!
+        </Text>
+        <Text className="mt-2 text-base text-white">
+          Uma bela combinação para seu lanche da tarde.
+        </Text>
+        <TouchableOpacity className="mt-5 self-start rounded-xl bg-white px-5 py-3">
+          <Text className="font-bold text-green-700">Peça já!</Text>
+        </TouchableOpacity>
+      </View>
 
-  <Text className="mt-2 text-3xl font-bold text-white">
-    Leve duas tapiocas e ganhe uma água de coco grátis!
-  </Text>
+      <Text className="mt-8 mb-4 text-2xl font-bold">Categorias</Text>
 
-  <Text className="mt-2 text-base text-white">
-    Uma bela combinação para seu lanche da tarde.
-  </Text>
+      <View className="flex-row justify-between">
+        <TouchableOpacity className="w-[30%] items-center rounded-2xl bg-yellow-100 py-3">
+          <Text className="text-4xl">🥟</Text>
+          <Text className="mt-2">Tapiocas</Text>
+        </TouchableOpacity>
 
-  <TouchableOpacity className="mt-5 self-start rounded-xl bg-white px-5 py-3">
-    <Text className="font-bold text-green-700">
-      Peça já!
-    </Text>
-  </TouchableOpacity>
-</View>
+        <TouchableOpacity className="w-[30%] items-center rounded-2xl bg-yellow-100 py-3">
+          <Text className="text-4xl">🥤</Text>
+          <Text className="mt-2">Bebidas</Text>
+        </TouchableOpacity>
 
-<Text className="mt-8 mb-4 text-2xl font-bold">
-  Categorias
-</Text>
-
-<View className="flex-row justify-between">
-
-<TouchableOpacity className="w-[30%] items-center rounded-2xl bg-yellow-100 py-3">
-  <Text className="text-4xl">🥤</Text>
-  <Text className="mt-2">Bebidas</Text>
-</TouchableOpacity>
-
-<TouchableOpacity className="w-[30%] items-center rounded-2xl bg-yellow-100 py-3">
-  <Text className="text-4xl">🥐</Text>
-  <Text className="mt-2">Salgados</Text>
-</TouchableOpacity>
-<TouchableOpacity className="w-[30%] items-center rounded-2xl bg-yellow-100 py-3">
-  <Text className="text-4xl">🥟</Text>
-  <Text className="mt-2 ">Tapiocas</Text>
-</TouchableOpacity>
-  
-</View>
-</ScrollView> 
-
+        <TouchableOpacity className="w-[30%] items-center rounded-2xl bg-yellow-100 py-3">
+          <Text className="text-4xl">🥐</Text>
+          <Text className="mt-2">Salgados</Text>
+        </TouchableOpacity>
+      </View>
+      <Text className="mt-8 mb-4 text-2xl font-bold">Principais Produtos</Text>
+      <View className="text-full flex-row flex-wrap justify-between">
+        {foods.map((food) => (
+          <FoodCard
+            key={food.id}
+            name={food.name}
+            price={food.price}
+            emoji={food.emoji}
+          />
+        ))}
+      </View>
+    </ScrollView>
   );
 }
-
-
