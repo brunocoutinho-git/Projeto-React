@@ -15,7 +15,7 @@ Apresentação: Demonstrar o aplicativo e explicar os principais componentes do 
 
 SABORES: Queijo, Presunto, Frango, Carne.
 
-CORES: Amarelo, Verde
+CORES: Amarelo claro e Verde
 
 DESCRIÇÃO: ---
 
