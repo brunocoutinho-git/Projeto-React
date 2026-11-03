@@ -44,3 +44,91 @@ export default function HomeScreen() {
     </ScrollView>
   );
 }
+
+const styles = StyleSheet.create({
+  container: { 
+    flex: 1,
+    backgroundColor: "#FFF8E7",
+  },
+
+  header: {
+    marginBottom: 25,
+    marginTop: 50,
+  },
+  
+  greeting: {
+    fontSize: 16,
+    color: "#666",
+  },
+
+  title: {
+    fontSize: 28,
+    fontWeight: "bold",
+    color: "#222",
+    marginTop: 5,
+  },
+
+  banner: {
+    backgroundColor: "#F2B632",
+    padding: 25,
+    borderRadius: 20,
+  },
+
+    offer: {
+    fontSize: 14,
+    color: "#666",
+    fontWeight: "bold",
+  },
+
+  bannerTitle: {
+    fontSize: 25,
+    fontWeight: "bold",
+    color: "#222",
+    marginTop: 8,
+  },
+  
+  bannerText: {
+    fontSize: 15,
+    color: "#222",
+    marginTop: 8,
+  },
+
+  button: {
+    backgroundColor: "#1F5D50",
+    paddingVertical: 12,
+    paddingHorizontal: 20,
+    borderRadius: 10,
+    marginTop: 20,
+    alignSelf: "flex-start",
+  },
+
+  buttonText: {
+    color: "#F2B632",
+    fontWeight: "bold",
+  },
+
+  sectionTitle: {
+    fontSize: 22,
+    fontWeight: "bold",
+    marginTop: 30,
+    marginBottom: 15,
+  },
+
+  categories: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+  },
+
+  category: {
+    alignItems: "center",
+    backgroundColor: "#98a198",
+    paddingVertical: 18,
+    borderRadius: 15,
+    width: "30%",
+  },
+
+  emoji: {
+    fontSize: 30,
+    marginBottom: 5,
+  },
+});
