@@ -1,4 +1,3 @@
-
 import {
     ScrollView,
     Text,
@@ -21,12 +20,12 @@ export default function HomeScreen() {
   </Text>
 </View>
 
-<View className="rounded-3x1 bg-orange-500 p-6">
+<View className="rounded-3xl bg-green-700 p-6">
   <Text className="text-sm font-bold text-white">
-    Oferta Especial
+    Oferta Especial!
   </Text>
 
-  <Text className="mt-2 text-3x1 font-bold text-white">
+  <Text className="mt-2 text-3xl font-bold text-white">
     Leve duas tapiocas e ganhe uma água de coco grátis!
   </Text>
 
@@ -34,44 +33,32 @@ export default function HomeScreen() {
     Uma bela combinação para seu lanche da tarde.
   </Text>
 
-  <TouchableOpacity className="mt-5 self-start rounded-x1 bg-white px-5 py-3">
-    <Text className="font-bold text-orange-500">
+  <TouchableOpacity className="mt-5 self-start rounded-xl bg-white px-5 py-3">
+    <Text className="font-bold text-green-700">
       Peça já!
     </Text>
   </TouchableOpacity>
 </View>
 
-<Text className="mt-8 mb-4 text-2x1 font-bold">
+<Text className="mt-8 mb-4 text-2xl font-bold">
   Categorias
 </Text>
 
 <View className="flex-row justify-between">
-  <TouchableOpacity className="w[30%] items-center rounded-2x1 bg-orange-50 py=50">
-<Text className="text-4x1">
-  🥤
-</Text>
-<Text className="mt-2 ">
-  Bebidas
-</Text>
-  </TouchableOpacity>
 
-  <TouchableOpacity className="w[30%] items-center rounded-2x1 bg-orange-50 py=50">
-<Text className="text-4x1">
-  🥐
-</Text>
-<Text className="mt-2 ">
-  Salgados
-</Text>
-  </TouchableOpacity>
-  <TouchableOpacity className="w[30%] items-center rounded-2x1 bg-orange-50 py=50">
-<Text className="text-4x1">
-  🥟
-</Text>
-<Text className="mt-2 ">
-  Tapiocas
-</Text>
+<TouchableOpacity className="w-[30%] items-center rounded-2xl bg-yellow-100 py-3">
+  <Text className="text-4xl">🥤</Text>
+  <Text className="mt-2">Bebidas</Text>
+</TouchableOpacity>
 
-  </TouchableOpacity>
+<TouchableOpacity className="w-[30%] items-center rounded-2xl bg-yellow-100 py-3">
+  <Text className="text-4xl">🥐</Text>
+  <Text className="mt-2">Salgados</Text>
+</TouchableOpacity>
+<TouchableOpacity className="w-[30%] items-center rounded-2xl bg-yellow-100 py-3">
+  <Text className="text-4xl">🥟</Text>
+  <Text className="mt-2 ">Tapiocas</Text>
+</TouchableOpacity>
   
 </View>
 </ScrollView> 
