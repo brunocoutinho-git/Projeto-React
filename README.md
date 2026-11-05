@@ -10,14 +10,14 @@ DESCRIÇÃO: ---
 INSTRUÇÕES DE EXECUÇÃO:
 - npx expo start
 - Escanear QR code e executar no Expo Go
-- Visualização da inteface
+- Visualização da interface
   PRINCIPAIS COMPONENTES DO CÓDIGO: 
 -- View: Agrupa e estrutura outros componentes;
 -- Text: Permite exibir strings de texto na tela do aplicativo;
 -- TouchableOpacity: Permite tornar elementos clicáveis e sensíveis ao toque do usuário;
 -- ScrollView: Contâiner de rolagem;
--- px: espaçamento interno horizontal; py: espaçamento interno vertical;
--- rounded: arredonda o card que contém os elementos.
+-- px: Espaçamento interno horizontal; py: Espaçamento interno vertical;
+-- rounded: Arredonda o card que contém os elementos.
 - Teste do carrinho de compras
 - Teste da pesquisa dos produtos
 - Teste do cálculo de valores
