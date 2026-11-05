@@ -15,8 +15,9 @@ INSTRUÇÕES DE EXECUÇÃO:
 -- View: Agrupa e estrutura outros componentes;
 -- Text: Permite exibir strings de texto na tela do aplicativo;
 -- TouchableOpacity: Permite tornar elementos clicáveis e sensíveis ao toque do usuário;
--- ScrollView: Contâiner de rolagem.
--- px: espaçamento interno horizontal; py: espaçamento interno vertical
+-- ScrollView: Contâiner de rolagem;
+-- px: espaçamento interno horizontal; py: espaçamento interno vertical;
+-- rounded: arredonda o card que contém os elementos.
 - Teste do carrinho de compras
 - Teste da pesquisa dos produtos
 - Teste do cálculo de valores
