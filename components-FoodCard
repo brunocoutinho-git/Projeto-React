@@ -4,11 +4,12 @@ type FoodCardProps = {
   name: string;
   price: number;
   emoji: string;
+  onAdd: () => void;
 };
 
-export default function FoodCard({ name, price, emoji }: FoodCardProps) {
+export default function FoodCard({ name, price, emoji, onAdd }: FoodCardProps) {
   return (
-    <View className="mb-5 w-[48%] rounded-2x1 bg-yellow-100 p-4">
+    <View className="mb-5 w-[48%] rounded-3xl bg-yellow-100 p-4">
       <Text className="text-center text-6x1">{emoji}</Text>
 
       <Text className="mt-3 text-lg font-bold text-center">{name}</Text>
@@ -17,9 +18,12 @@ export default function FoodCard({ name, price, emoji }: FoodCardProps) {
         R$ {price.toFixed(2)}
       </Text>
 
-      <TouchableOpacity className="text-center font-bold text-white">
+      <TouchableOpacity
+        onPress={onAdd}
+        className="text-center font-bold text-white"
+      >
         <Text className="text-center font-bold text-orange-500 m-1">
-          Adicionar ao carrinho
+          Adicionar
         </Text>
       </TouchableOpacity>
     </View>
