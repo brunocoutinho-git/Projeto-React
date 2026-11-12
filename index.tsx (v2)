@@ -59,8 +59,8 @@ export default function HomeScreen() {
             price={food.price}
             emoji={food.emoji}
             onAdd={() => {
-              setCartCount(Math.max(0, cartCount + 1));
-              setTotal(Math.max(0, total + food.price));
+              setCartCount(cartCount + 1);
+              setTotal(total + food.price);
             }}
             onDelete={() => {
               setCartCount(Math.max(0, cartCount - 1));
