@@ -5,9 +5,16 @@ type FoodCardProps = {
   price: number;
   emoji: string;
   onAdd: () => void;
+  onDelete: () => void;
 };
 
-export default function FoodCard({ name, price, emoji, onAdd }: FoodCardProps) {
+export default function FoodCard({
+  name,
+  price,
+  emoji,
+  onAdd,
+  onDelete,
+}: FoodCardProps) {
   return (
     <View className="mb-5 w-[48%] rounded-3xl bg-yellow-100 p-4">
       <Text className="text-center text-6x1">{emoji}</Text>
@@ -17,15 +24,20 @@ export default function FoodCard({ name, price, emoji, onAdd }: FoodCardProps) {
       <Text className="mt-1 font-bold text-orange-500 text-center">
         R$ {price.toFixed(2)}
       </Text>
-
-      <TouchableOpacity
-        onPress={onAdd}
-        className="text-center font-bold text-white"
-      >
-        <Text className="text-center font-bold text-orange-500 m-1">
-          Adicionar
-        </Text>
-      </TouchableOpacity>
+      <View className="flex-row justify-between items-center mt-2">
+        <TouchableOpacity
+          onPress={onDelete}
+          className="bg-green-200 font-bold w-[40%] rounded-full self-start"
+        >
+          <Text className="text-center font-bold text-orange-500 m-1">-</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          onPress={onAdd}
+          className="bg-green-200 font-bold w-[40%] rounded-full justify-end self-end"
+        >
+          <Text className="text-center font-bold text-orange-500 m-1">+</Text>
+        </TouchableOpacity>
+      </View>
     </View>
   );
 }
