@@ -4,8 +4,8 @@ import FoodCard from "../components/FoodCard";
 import { foods } from "../constants/foods";
 
 export default function HomeScreen() {
-  const [cardCount, setCardCount] = useState(0);
-
+  const [cartCount, setCartCount] = useState(0);
+  const [total, setTotal] = useState(0);
   return (
     <ScrollView
       className="flex-1 bg-white px-4"
@@ -13,9 +13,7 @@ export default function HomeScreen() {
     >
       <View className="mb-6 mt-4">
         <Text className="text-base text-gray-500">Olá, seja bem vindo!</Text>
-        <Text className="mt-2 text-base font-bold text-orange-500">
-          Items no Carrinho: {cardCount}
-        </Text>
+
         <Text className="text-2xl font-bold text-gray-900">
           Gostaria de provar uma tapioca quentinha?
         </Text>
@@ -53,16 +51,35 @@ export default function HomeScreen() {
         </TouchableOpacity>
       </View>
       <Text className="mt-8 mb-4 text-2xl font-bold">Principais Produtos</Text>
-      <View className="text-full flex-row flex-wrap justify-between">
+      <View className="text-full flex-row flex-wrap justify-between text-center">
         {foods.map((food) => (
           <FoodCard
             key={food.id}
             name={food.name}
             price={food.price}
             emoji={food.emoji}
-            onAdd={() => setCardCount(cardCount + 1)}
+            onAdd={() => {
+              setCartCount(Math.max(0, cartCount + 1));
+              setTotal(Math.max(0, total + food.price));
+            }}
+            onDelete={() => {
+              setCartCount(Math.max(0, cartCount - 1));
+              setTotal(Math.max(0, total - food.price));
+            }}
           />
         ))}
+      </View>
+      <View className="flex-row">
+        <View className="bg-green-700 flex-row justify-between items-center rounded-2xl py-3 w-[30%]">
+          <Text className="text-base font-bold text-white mx-4">
+            Items no Carrinho: {cartCount}
+          </Text>
+        </View>
+        <View className="bg-green-700 items-center rounded-2xl py-3 w-[30%]">
+          <Text className="text-base font-bold text-white mx-4">
+            Total: R$ {total.toFixed(2)}
+          </Text>
+        </View>
       </View>
     </ScrollView>
   );
