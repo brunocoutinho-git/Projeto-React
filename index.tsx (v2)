@@ -51,7 +51,7 @@ export default function HomeScreen() {
         </TouchableOpacity>
       </View>
       <Text className="mt-8 mb-4 text-2xl font-bold">Principais Produtos</Text>
-      <View className="text-full flex-row flex-wrap justify-between text-center">
+      <View className="text-full flex-row flex-wrap justify-between text-center items-center">
         {foods.map((food) => (
           <FoodCard
             key={food.id}
