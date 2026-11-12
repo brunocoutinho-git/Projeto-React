@@ -68,15 +68,15 @@ export default function HomeScreen() {
             }}
           />
         ))}
-        <View className="bg-green-700 rounded-2xl py-3 w-[45%] h-11 items-center justify-center">
-          <Text className="text-base font-bold text-white">
+        <View className="bg-green-700 rounded-2xl text-lg py-3 w-[48%] h-11">
+          <Text className="text-center font-bold text-white">
             Items no Carrinho: {cartCount}
           </Text>
         </View>
 
-        <View className="bg-green-700 rounded-2xl py-3 w-[50%] h-11 items-center justify-center">
-          <Text className="text-base font-bold text-white">
-            Preço Total: R$ {total.toFixed(2)}
+        <View className="bg-green-700 rounded-2xl py-3 mb-6 w-[48%] h-11">
+          <Text className="text-center font-bold text-white mx-6">
+            Total: R$ {total.toFixed(2)}
           </Text>
         </View>
       </View>
