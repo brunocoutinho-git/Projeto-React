@@ -68,16 +68,15 @@ export default function HomeScreen() {
             }}
           />
         ))}
-      </View>
-      <View className="flex-row">
-        <View className="bg-green-700 flex-row justify-between items-center rounded-2xl py-3 w-[30%]">
-          <Text className="text-base font-bold text-white mx-4">
+        <View className="bg-green-700 rounded-2xl py-3 w-[45%] h-11 items-center justify-center">
+          <Text className="text-base font-bold text-white">
             Items no Carrinho: {cartCount}
           </Text>
         </View>
-        <View className="bg-green-700 items-center rounded-2xl py-3 w-[30%]">
-          <Text className="text-base font-bold text-white mx-4">
-            Total: R$ {total.toFixed(2)}
+
+        <View className="bg-green-700 rounded-2xl py-3 w-[50%] h-11 items-center justify-center">
+          <Text className="text-base font-bold text-white">
+            Preço Total: R$ {total.toFixed(2)}
           </Text>
         </View>
       </View>
