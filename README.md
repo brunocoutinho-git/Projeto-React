@@ -6,7 +6,7 @@ DESCRIÇÃO: O projeto em questão trata com a construção de uma interface de 
   Queijo, Presunto, Frango, Carne.
 
 - Cores escolhidas:
-  Verde para o card contendo a oferta; Amarelo Claro para cards contendo os sabores; Laranja para a fonte dentros dos cards de sabores.
+  Verde para o card contendo a oferta; Amarelo Claro para cards contendo os sabores; Laranja para a fonte nos cards de sabores.
 
 INSTRUÇÕES DE EXECUÇÃO:
 - npx expo start;
