@@ -6,7 +6,7 @@ DESCRIÇÃO: O projeto em questão trata com a construção de uma interface de 
   Queijo, Presunto, Frango, Carne.
 
 - Cores escolhidas:
-  Verde para o card contendo a oferta; Amarelo Claro para cards contendo os sabores; Laranja para a fonte nos cards de sabores.
+  Verde para o card contendo a oferta; Amarelo Claro para cards contendo os sabores; Laranja para a fonte nos preços dos cards de sabores e do símbolo "+".
 
 INSTRUÇÕES DE EXECUÇÃO:
 - npx expo start;
@@ -14,15 +14,15 @@ INSTRUÇÕES DE EXECUÇÃO:
 - Visualização da interface.
   
 PRINCIPAIS COMPONENTES DO CÓDIGO: 
-- View: Agrupa e estrutura outros componentes;
-- Text: Permite exibir strings de texto na tela do aplicativo;
-- TouchableOpacity: Permite tornar elementos clicáveis e sensíveis ao toque do usuário;
+- View: Agrupa e torna componentes visíveis na página;
+- Text: Permite inserir textos na página;
+- TouchableOpacity: Permite tornar elementos sensíveis e clicáveis para o usuário;
 - ScrollView: Contâiner de rolagem;
 - px: Espaçamento interno horizontal; py: Espaçamento interno vertical;
 - rounded: Arredonda o card que contém os elementos.
 
 FUNCIONALIDADES:
-- Botões funcionais;
+- Botões funcionais de adicionar e remover;
 - Implementação do carrinho de compras;
 - Implementação do cálculo de valores;
 - Implementação de pesquisa por produtos;
