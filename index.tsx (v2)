@@ -6,12 +6,15 @@ import { ScrollView, Text, TouchableOpacity, View } from "react-native";
 export default function HomeScreen() {
   const [cart, SetCart] = useState<any[]>([]);
   const total = cart.reduce((soma, item) => soma + item.price, 0);
+
   function addToCart(food: any) {
     SetCart((current) => [...current, food]);
   }
+
   function removeFromCart(index: number) {
     SetCart((current) => current.filter((_, itemIndex) => itemIndex !== index));
   }
+
   return (
     <ScrollView
       className="flex-1 bg-white px-4"
@@ -67,6 +70,7 @@ export default function HomeScreen() {
             onAdd={() => addToCart(food)}
           />
         ))}
+        ;
       </View>
       <View className="justify-between flex-row">
         <Text className="mt-8 mb-4 text-2xl font-bold">Carrinho</Text>
@@ -88,7 +92,7 @@ export default function HomeScreen() {
               R$ {item.price.toFixed(2)}
             </Text>
             <TouchableOpacity onPress={() => removeFromCart(index)}>
-              <Text className="font-bold text-black">Retirar</Text>
+              <Text className="font-bold text-gray-900">Retirar</Text>
             </TouchableOpacity>
           </View>
         ))}
