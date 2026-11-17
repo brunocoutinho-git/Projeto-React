@@ -1,11 +1,17 @@
+import FoodCard from "@/components/FoodCard";
+import { foods } from "@/constants/foods";
 import { useState } from "react";
 import { ScrollView, Text, TouchableOpacity, View } from "react-native";
-import FoodCard from "../components/FoodCard";
-import { foods } from "../constants/foods";
 
 export default function HomeScreen() {
-  const [cartCount, setCartCount] = useState(0);
-  const [total, setTotal] = useState(0);
+  const [cart, SetCart] = useState<any[]>([]);
+  const total = cart.reduce((soma, item) => soma + item.price, 0);
+  function addToCart(food: any) {
+    SetCart((current) => [...current, food]);
+  }
+  function removeFromCart(index: number) {
+    SetCart((current) => current.filter((_, itemIndex) => itemIndex !== index));
+  }
   return (
     <ScrollView
       className="flex-1 bg-white px-4"
@@ -51,34 +57,41 @@ export default function HomeScreen() {
         </TouchableOpacity>
       </View>
       <Text className="mt-8 mb-4 text-2xl font-bold">Principais Produtos</Text>
-      <View className="text-full flex-row flex-wrap justify-between text-center items-center">
+      <View className="flex-row flex-wrap justify-between">
         {foods.map((food) => (
           <FoodCard
             key={food.id}
             name={food.name}
             price={food.price}
             emoji={food.emoji}
-            onAdd={() => {
-              setCartCount(cartCount + 1);
-              setTotal(total + food.price);
-            }}
-            onDelete={() => {
-              setCartCount(Math.max(0, cartCount - 1));
-              setTotal(Math.max(0, total - food.price));
-            }}
+            onAdd={() => addToCart(food)}
           />
         ))}
-        <View className="bg-green-700 rounded-2xl text-lg py-3 w-[48%] h-11">
-          <Text className="text-center font-bold text-white">
-            Items no Carrinho: {cartCount}
-          </Text>
-        </View>
+      </View>
+      <View className="justify-between flex-row">
+        <Text className="mt-8 mb-4 text-2xl font-bold">Carrinho</Text>
+        <Text className="mt-8 mb-4 text-2xl font-bold">
+          Total: {total.toFixed(2)}
+        </Text>
+      </View>
 
-        <View className="bg-green-700 rounded-2xl py-3 mb-6 w-[48%] h-11">
-          <Text className="text-center font-bold text-white mx-6">
-            Total: R$ {total.toFixed(2)}
-          </Text>
-        </View>
+      <View className="mb-3 p-4">
+        {cart.map((item, index) => (
+          <View
+            key={index}
+            className="mb-2 flex-row items-center justify-between bg-yellow-100 p-4 rounded-xl"
+          >
+            <Text className="font-bold text-black">
+              {item.emoji} {item.name}
+            </Text>
+            <Text className="font-bold text-black">
+              R$ {item.price.toFixed(2)}
+            </Text>
+            <TouchableOpacity onPress={() => removeFromCart(index)}>
+              <Text className="font-bold text-black">Retirar</Text>
+            </TouchableOpacity>
+          </View>
+        ))}
       </View>
     </ScrollView>
   );
