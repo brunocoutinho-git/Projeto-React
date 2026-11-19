@@ -34,7 +34,7 @@ export default function HomeScreen() {
           2 tapiocas + água de coco grátis!
         </Text>
         <Text className="mt-2 text-base text-white">
-          Uma bela combinação para seu lanche da tarde.
+          Uma bela combinação para seu lanche da tarde. Só na Tapiocaria Juá
         </Text>
         <TouchableOpacity className="mt-5 self-start rounded-xl bg-white px-5 py-3">
           <Text className="font-bold text-green-700">Peça já!</Text>
