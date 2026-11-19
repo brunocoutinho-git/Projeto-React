@@ -9,8 +9,9 @@ DESCRIÇÃO: O projeto em questão trata com a construção de uma interface de 
   Verde para o card contendo a oferta; Amarelo Claro para cards contendo os sabores; Laranja para a fonte nos preços dos cards de sabores e do símbolo "+".
 
 INSTRUÇÕES DE EXECUÇÃO:
+- Terminal -> New Terminal;
 - npx expo start;
-- Escanear QR code e executar no Expo Go;
+- QR code;
 - Visualização da interface.
   
 PRINCIPAIS COMPONENTES DO CÓDIGO: 
@@ -18,7 +19,6 @@ PRINCIPAIS COMPONENTES DO CÓDIGO:
 - Text: Permite inserir textos na página;
 - TouchableOpacity: Permite tornar elementos sensíveis e clicáveis para o usuário;
 - ScrollView: Contâiner de rolagem;
-- px: Espaçamento interno horizontal; py: Espaçamento interno vertical;
 - rounded: Arredonda o card que contém os elementos.
 
 FUNCIONALIDADES:
