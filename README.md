@@ -1,4 +1,4 @@
-# Projeto de Cardápio (Tapioca)
+# Projeto de Delivery (Tapiocaria Juá)
 ALUNO: Bruno Mateus de Oliveira Coutinho
 
 DESCRIÇÃO: O projeto em questão trata com a construção de uma interface de delivery em que sua especialidade são as tapiocas e seus sabores. Também são servidas bebidas e outros salgados.
