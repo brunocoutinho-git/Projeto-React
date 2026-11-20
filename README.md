@@ -18,8 +18,8 @@ PRINCIPAIS COMPONENTES DO CÓDIGO:
 - View: Agrupa e torna componentes visíveis na página;
 - Text: Permite inserir textos na página;
 - TouchableOpacity: Permite tornar elementos sensíveis e clicáveis para o usuário;
-- ScrollView: Contâiner de rolagem;
-- rounded: Arredonda o card que contém os elementos.
+- ScrollView: Permite rolar a tela quando o conteúdo ultrapassa o limite da mesma;
+- Image: Permite adicionar imagens ao projeto.
 
 FUNCIONALIDADES:
 - Botões funcionais de adicionar e remover;
