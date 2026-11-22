@@ -1,30 +1,36 @@
-# Projeto de Delivery (Tapiocaria Juá)
+# Tapioca Delivery
 ALUNO: Bruno Mateus de Oliveira Coutinho
 
-DESCRIÇÃO: O projeto em questão trata com a construção de uma interface de delivery em que sua especialidade são as tapiocas e seus sabores. Também são servidas bebidas e outros salgados.
-- Sabores de tapioca:
-  Queijo, Presunto, Frango, Carne.
+OBJETIVO: Oferecer uma interface atrativa de aplicação Delivery com a possibilidade de adição ou exclusão de produtos do carrinho, além de calcular seus valores.
 
-- Cores escolhidas:
-  Verde para o card contendo a oferta; Amarelo Claro para cards contendo os sabores; Laranja para a fonte nos preços dos cards de sabores e do símbolo "+".
-
-INSTRUÇÕES DE EXECUÇÃO:
-- Terminal -> New Terminal;
-- npx expo start;
-- QR code;
-- Visualização da interface.
-  
-PRINCIPAIS COMPONENTES DO CÓDIGO: 
-- View: Agrupa e torna componentes visíveis na página;
-- Text: Permite inserir textos na página;
-- TouchableOpacity: Permite tornar elementos sensíveis e clicáveis para o usuário;
-- ScrollView: Permite rolar a tela quando o conteúdo ultrapassa o limite da mesma;
-- Image: Permite adicionar imagens ao projeto.
+DESCRIÇÃO: O projeto em questão trata com a construção de uma interface de Delivery com especialidade em tapiocas e seus sabores. Também é servida água de côco e outros salgados.
 
 FUNCIONALIDADES:
-- Botões funcionais de adicionar e remover;
-- Implementação do carrinho de compras;
-- Implementação do cálculo de valores;
-- Implementação de pesquisa por produtos;
+- Visualização dos produtos;
+- Botões e carrinho de compras;
+- Cálculo de valores;
+- Contagem dos itens.
+  
+TECNOLOGIAS:
+- React Native;
+- Expo Go;
+- TypeScript;
+- NativeWind;
+- GitHub;
+- Javascript;
+  
+ESTRUTURA:
+- metro.config.js -> Empacota todos os arquivos do projeto React e prepara tudo para o app rodar;
+- babel.config.js -> Traduz o código para um JavaScript simples que o celular consiga ler e executar;
+- index.tsx -> Contém código da interface principal do aplicativo;
+- nativewind-en.d.ts -> Ele ensina o TypeScript a aceitar a prop className nos componentes do React Native;
+- tailwind.config.js -> É o arquivo de configuração do Tailwind;
+- FoodCard -> É o componente reutilizável usado no foods.map.
+  
+EXECUÇÃO:
+- npx expo start;
+- QR Code.
+
+
 
 
