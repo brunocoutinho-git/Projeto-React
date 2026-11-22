@@ -25,7 +25,7 @@ ESTRUTURA:
 - index.tsx -> Contém código da interface principal do aplicativo;
 - nativewind-en.d.ts -> Ele ensina o TypeScript a aceitar a prop className nos componentes do React Native;
 - tailwind.config.js -> É o arquivo de configuração do Tailwind;
-- FoodCard -> É o componente reutilizável usado no foods.map.
+- FoodCard.tsx -> É o componente reutilizável usado no foods.map.
   
 EXECUÇÃO:
 - npx expo start;
