@@ -18,6 +18,7 @@ TECNOLOGIAS:
 - NativeWind;
 - GitHub;
 - Javascript;
+- JSX.
   
 ESTRUTURA:
 - metro.config.js -> Empacota todos os arquivos do projeto React e prepara tudo para o app rodar;
