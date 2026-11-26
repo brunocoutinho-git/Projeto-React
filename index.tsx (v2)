@@ -29,10 +29,6 @@ export default function HomeScreen() {
       </View>
 
       <View className="rounded-3xl bg-green-700 p-6 items-center justify-center">
-        <Image
-          source={require("../../assets/images/Logo-tapiocaria.png")}
-          className="h-28 w-28"
-        />
         <Text className="text-sm font-bold text-white">Oferta Especial!</Text>
         <Text className="mt-2 text-2xl font-bold text-white">
           2 tapiocas + água de coco grátis!
@@ -81,7 +77,7 @@ export default function HomeScreen() {
           />
         ))}
       </View>
-      <View className="justify-between flex-row">
+      <View className="justify-between flex-row text-gray-900">
         <Text className="mt-8 mb-4 text-2xl font-bold">
           Carrinho: {cart.length}
         </Text>
