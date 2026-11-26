@@ -1,0 +1,53 @@
+import { useRouter } from "expo-router";
+import { useState } from "react";
+import { Image, Text, TextInput, TouchableOpacity, View } from "react-native";
+
+export default function Login() {
+  const [nome, setNome] = useState("");
+  const [senha, setSenha] = useState("");
+  const router = useRouter();
+
+  return (
+    <View className="flex-1 justify-center bg-[#FFF8E7] px-6">
+      <Image
+        source={require("../../assets/images/Logo-tapiocaria.png")}
+        className="mb-4 h-40 w-40 self-center"
+        resizeMode="contain"
+      />
+
+      <Text className="mb-6 text-center text-3xl font-bold text-[#245C36]">
+        Login
+      </Text>
+
+      <TextInput
+        value={nome}
+        onChangeText={setNome}
+        placeholder="Nome"
+        placeholderTextColor="#9CA88F"
+        autoCapitalize="none"
+        className="mb-3 rounded-xl border border-[#D6DFC9] bg-white px-4 py-3 text-[#245C36]"
+      />
+
+      <TextInput
+        value={senha}
+        onChangeText={setSenha}
+        placeholder="Senha"
+        placeholderTextColor="#9CA88F"
+        secureTextEntry
+        className="mb-4 rounded-xl border border-[#D6DFC9] bg-white px-4 py-3 text-[#245C36]"
+      />
+
+      <TouchableOpacity
+        onPress={() =>
+          router.push({
+            pathname: "/HomeScreen",
+            params: { nome: nome },
+          })
+        }
+        className="w-[30%] self-center rounded-xl border-2 border-[#A7C957] bg-[#245C36] py-3"
+      >
+        <Text className="text-center font-bold text-white">Entrar</Text>
+      </TouchableOpacity>
+    </View>
+  );
+}
