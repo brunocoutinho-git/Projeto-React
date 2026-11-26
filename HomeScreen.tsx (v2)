@@ -1,6 +1,6 @@
-import FoodCard from "@/components/FoodCard";
-import { foods } from "@/constants/foods";
+import { useRouter } from "expo-router";
 import { useState } from "react";
+
 import { Image, ScrollView, Text, TouchableOpacity, View } from "react-native";
 
 export default function HomeScreen() {
@@ -21,14 +21,13 @@ export default function HomeScreen() {
       className="flex-1 bg-[#FFF8E7] px-4"
       showsVerticalScrollIndicator={false}
     >
-      <View className="mb-6 mt-4">
+      <View className="mb-6 mt-4 justify-center">
         <TouchableOpacity
           onPress={() => router.back()}
-          className="rounded-xl p-3"
+          className="self-end rounded-xl border border-[#D6DFC9] bg-[#F1F5E9] py-5 my-4 mx-4 px-6"
         >
-          <Text className="text-right font-bold text-[#245C36]">Voltar</Text>
+          <Text className="font-bold text-gray-600">Sair</Text>
         </TouchableOpacity>
-
         <Text className="text-base text-[#71816B]">Olá, seja bem-vindo!</Text>
 
         <Text className="text-2xl font-bold text-[#245C36]">
@@ -62,7 +61,10 @@ export default function HomeScreen() {
       </Text>
 
       <View className="flex-row justify-between">
-        <TouchableOpacity className="w-[30%] items-center rounded-2xl border border-[#D6DFC9] bg-[#F1F5E9] py-3">
+        <TouchableOpacity
+          onPress={() => router.push("/produtos")}
+          className="w-[30%] items-center rounded-2xl border border-[#D6DFC9] bg-[#F1F5E9] py-3"
+        >
           <Image
             className="h-10 w-10"
             source={require("../../assets/images/tapioca_emoji.png")}
@@ -83,53 +85,6 @@ export default function HomeScreen() {
             Outros Salgados
           </Text>
         </TouchableOpacity>
-      </View>
-
-      <Text className="mb-4 mt-8 text-2xl font-bold text-[#245C36]">
-        Principais Produtos
-      </Text>
-
-      <View className="flex-row flex-wrap justify-between">
-        {foods.map((food) => (
-          <FoodCard
-            key={food.id}
-            name={food.name}
-            price={food.price}
-            emoji={food.emoji}
-            onAdd={() => addToCart(food)}
-          />
-        ))}
-      </View>
-
-      <View className="flex-row justify-between">
-        <Text className="mb-4 mt-8 text-2xl font-bold text-[#245C36]">
-          Carrinho: {cart.length}
-        </Text>
-
-        <Text className="mb-4 mt-8 text-2xl font-bold text-[#245C36]">
-          Total: R$ {total.toFixed(2)}
-        </Text>
-      </View>
-
-      <View className="mb-3 rounded-2xl bg-[#F1F5E9] p-4">
-        {cart.map((item, index) => (
-          <View
-            key={index}
-            className="mb-2 flex-row items-center justify-between rounded-xl border border-[#D6DFC9] bg-white p-4"
-          >
-            <Text className="font-bold text-[#245C36]">
-              {item.emoji} {item.name}
-            </Text>
-
-            <Text className="font-bold text-[#245C36]">
-              R$ {item.price.toFixed(2)}
-            </Text>
-
-            <TouchableOpacity onPress={() => removeFromCart(index)}>
-              <Text className="font-bold text-red-700">Retirar</Text>
-            </TouchableOpacity>
-          </View>
-        ))}
       </View>
     </ScrollView>
   );
