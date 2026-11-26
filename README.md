@@ -23,7 +23,8 @@ TECNOLOGIAS:
 ESTRUTURA:
 - metro.config.js -> Empacota todos os arquivos do projeto React e prepara tudo para o app rodar;
 - babel.config.js -> Traduz o código para um JavaScript simples que o celular consiga ler e executar;
-- index.tsx -> Contém código da interface principal do aplicativo;
+- index.tsx -> Contém uma interface de login com botão levando ao HomeScreen;
+- HomeScreen.tsx -> Contém código da interface principal do aplicativo;
 - nativewind-en.d.ts -> Ele ensina o TypeScript a aceitar a prop className nos componentes do React Native;
 - tailwind.config.js -> É o arquivo de configuração do Tailwind;
 - FoodCard.tsx -> É o componente reutilizável usado no foods.map.
